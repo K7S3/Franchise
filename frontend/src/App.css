@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+/* Footer Styles */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.footer a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.franchise-sponsors-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* z-index: 1000; Ensure it stays on top */
+    /* Additional styles (e.g., background, padding) can be added here */
+}

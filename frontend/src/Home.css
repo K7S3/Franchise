@@ -1,0 +1,138 @@
+.homePage {
+    overflow-y: scroll; /* Enable scrolling */
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  
+  .step {
+      min-height: 70vh; /* 70% of the viewport height */
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      /* align-items: center; */
+      scroll-snap-align: start;
+  }
+  
+  .step h2 {
+      margin-top: 0;
+  }
+  
+  .step p {
+      font-size: 16px;
+      line-height: 1.6;
+  }
+  
+  
+  /* Alternate text alignment for each step */
+  .step:nth-child(odd) {
+      text-align: left;
+  }
+  
+  .step:nth-child(even){
+      text-align: right;
+  }
+  
+  .steps-container {
+      /* Enable scroll snapping */
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 80vh; /* Adjust as needed */
+  }
+    body {
+      scroll-behavior: smooth;
+    } 
+
+/* Navigation Arrows */
+.step-arrow {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+    background-image: '../assets/arrow.png';
+}
+
+.step-arrow a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.step-arrow a:hover {
+    background-color: #0056b3;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Adjust as needed */
+  }
+  
+  .step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+    filter: alpha(opacity=20);
+    z-index: -1;
+  }
+  
+  .step-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(211, 255, 211); /* Background color for the text box */
+    padding: 20px; /* Padding inside the text box */
+    border-radius: 10px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional: adds a subtle shadow */
+    max-width: 600px; /* Adjust as needed */
+    margin: 20px; /* Adjust as needed */
+  }
+  
+  /* Optional: Add media query for responsive design */
+  @media (max-width: 768px) {
+    .step {
+      flex-direction: column;
+    }
+  
+    .step-content {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+ 
+button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: rgb(60, 179, 113);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(8, 56, 22)
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
